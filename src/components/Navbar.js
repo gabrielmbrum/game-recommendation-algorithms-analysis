@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.svg';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu visibility
+
   return (
     <nav className="bg-white shadow-md fixed w-full z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,7 +19,8 @@ const Navbar = () => {
               />
             </Link>
           </div>
-          {/* Navigation Links */}
+
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex space-x-6">
             <Link
               to="/"
@@ -44,11 +47,13 @@ const Navbar = () => {
               ALS
             </Link>
           </div>
+
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
               className="text-gray-700 focus:outline-none hover:text-blue-500"
               aria-label="Open menu"
+              onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu visibility
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,6 +72,40 @@ const Navbar = () => {
             </button>
           </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden flex flex-col space-y-4 mt-2 pb-4">
+            <Link
+              to="/"
+              className="text-gray-700 hover:text-blue-500 font-medium transition-colors"
+              onClick={() => setIsMenuOpen(false)} // Close menu on click
+            >
+              Home
+            </Link>
+            <Link
+              to="/KNNPage"
+              className="text-gray-700 hover:text-blue-500 font-medium transition-colors"
+              onClick={() => setIsMenuOpen(false)} // Close menu on click
+            >
+              KNN
+            </Link>
+            <Link
+              to="/SVDPage"
+              className="text-gray-700 hover:text-blue-500 font-medium transition-colors"
+              onClick={() => setIsMenuOpen(false)} // Close menu on click
+            >
+              SVD
+            </Link>
+            <Link
+              to="/ALSPage"
+              className="text-gray-700 hover:text-blue-500 font-medium transition-colors"
+              onClick={() => setIsMenuOpen(false)} // Close menu on click
+            >
+              ALS
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );

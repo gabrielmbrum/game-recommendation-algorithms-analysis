@@ -17,52 +17,52 @@ const HomePage = () => {
           </p>
         </section>
 
-        {/* Block 2: Algorithm 1 */}
+        {/* Block 2: KNN */}
         <section className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
           <div className="flex-1 text-left">
-            <h2 className="text-3xl font-bold text-gray-800">Algorithm 1</h2>
+            <h2 className="text-3xl font-bold text-gray-800">KNN</h2>
             <p className="mt-4 text-gray-600">
-              Algorithm 1 uses collaborative filtering techniques to recommend games based on user interactions and preferences. It analyzes patterns in user behavior to provide personalized suggestions.
+              KNN uses collaborative filtering techniques to recommend games based on user interactions and preferences. It analyzes patterns in user behavior to provide personalized suggestions.
             </p>
           </div>
           <div className="flex-1">
             <img
               src="https://via.placeholder.com/400x300"
-              alt="Algorithm 1"
+              alt="KNN"
               className="rounded-lg shadow-md"
             />
           </div>
         </section>
 
-        {/* Block 3: Algorithm 2 */}
+        {/* Block 3: SVD */}
         <section className="flex flex-col md:flex-row-reverse items-center space-y-8 md:space-y-0 md:space-x-12">
           <div className="flex-1 text-right">
-            <h2 className="text-3xl font-bold text-gray-800">Algorithm 2</h2>
+            <h2 className="text-3xl font-bold text-gray-800">SVD</h2>
             <p className="mt-4 text-gray-600">
-              Algorithm 2 is based on content-based filtering, recommending games by analyzing features and tags of games that users have liked in the past.
+              SVD is based on content-based filtering, recommending games by analyzing features and tags of games that users have liked in the past.
             </p>
           </div>
           <div className="flex-1">
             <img
               src="https://via.placeholder.com/400x300"
-              alt="Algorithm 2"
+              alt="SVD"
               className="rounded-lg shadow-md"
             />
           </div>
         </section>
 
-        {/* Block 4: Algorithm 3 */}
+        {/* Block 4: ALS */}
         <section className="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
           <div className="flex-1 text-left">
-            <h2 className="text-3xl font-bold text-gray-800">Algorithm 3</h2>
+            <h2 className="text-3xl font-bold text-gray-800">ALS</h2>
             <p className="mt-4 text-gray-600">
-              Algorithm 3 combines collaborative and content-based filtering in a hybrid model, delivering more accurate and diverse game recommendations.
+              ALS combines collaborative and content-based filtering in a hybrid model, delivering more accurate and diverse game recommendations.
             </p>
           </div>
           <div className="flex-1">
             <img
               src="https://via.placeholder.com/400x300"
-              alt="Algorithm 3"
+              alt="ALS"
               className="rounded-lg shadow-md"
             />
           </div>
