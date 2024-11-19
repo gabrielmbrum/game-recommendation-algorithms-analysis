@@ -17,7 +17,7 @@ const KNNPage = () => {
         <p className="text-lg text-gray-600 mb-8">
           Detailed performance metrics and an overview of KNN.
         </p>
-        <div className="bg-white p-8 rounded-lg shadow-md">
+        <div className="bg-white p-8 rounded-lg shadow-md flex justify-center items-center">
           <Graph labels={labels} data={data} title="KNN Performance" />
         </div>
       </div>

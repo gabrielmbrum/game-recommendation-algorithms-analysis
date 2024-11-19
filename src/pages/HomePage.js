@@ -8,7 +8,7 @@ const HomePage = () => {
       <Navbar />
 
       {/* Main Content */}
-      <div className="pt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="pt-20 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Block 1: About the Project */}
         <section className="text-center">
           <h1 className="text-4xl font-extrabold text-gray-800">Game Recommendation Algorithm Analysis</h1>
