@@ -39,69 +39,48 @@ const EDAPage = () => {
       path: '/eda/DetailPage',
       params: {
         title: 'Histograma de Horas Jogadas',
-        image: 'assets/top-15-jogados.webp',
+        image: 'assets/images/histograma-horas-jogadas.webp', // public\assets\images\histograma-horas-jogadas.webp
         description: `
-  Os dados analisados mostram informações detalhadas sobre os jogos mais jogados em um sistema de recomendação, fornecendo insights sobre as preferências dos usuários.
-  O jogo com o menor tempo acumulado no Top 15 alcançou <strong>35.443.052 horas</strong>, enquanto o mais jogado, <strong>Team Fortress 2</strong>, atingiu impressionantes <strong>101.809.976 horas</strong>.
-  A média de horas jogadas entre os jogos analisados é de aproximadamente <strong>60.707.944 horas</strong>, com um desvio padrão de <strong>22.549.342 horas</strong>, indicando uma variabilidade moderada.
-  A mediana, de <strong>46.720.360 horas</strong>, revela que metade dos jogos acumula menos de 47 milhões de horas jogadas.
-  Com um coeficiente de variação de <strong>37,1%</strong>, os dados mostram uma dispersão significativa, mas sem identificar outliers, o que aponta para uma consistência geral entre os jogos analisados.<br />
-  Ao observar o gráfico dos 15 jogos mais jogados, fica evidente a dominância de títulos como <strong>Team Fortress 2</strong>, <strong>Counter-Strike: Global Offensive</strong> e <strong>Dota 2</strong>, que lideram em horas acumuladas e refletem um alto nível de engajamento.
-  Jogos como <strong>Rust</strong> e <strong>Tom Clancy's Rainbow Six Siege</strong> ainda apresentam números expressivos, embora mais distantes do topo.
-  A grande concentração de horas em poucos títulos é um padrão esperado, dado o apelo competitivo, a retenção por meio de atualizações e o suporte a comunidades ativas.
-  Apesar disso, títulos como <strong>Terraria</strong> e <strong>Garry's Mod</strong>, mesmo com menor tempo acumulado, mostram a importância de atender a uma audiência diversificada.<br />
-  Essa análise demonstra que o sistema de recomendação está alinhado às preferências gerais dos jogadores, priorizando com eficácia os títulos mais jogados.
-  Ao mesmo tempo, ela sugere que uma estratégia de diversificação pode atrair usuários para jogos menos explorados, mas ainda relevantes.
-  Essa abordagem equilibra a recomendação de jogos populares com oportunidades de descoberta, maximizando o engajamento dos usuários e otimizando os resultados do sistema.
+        &emsp;&emsp;O gráfico de Distribuição de Horas Jogadas pelos Usuários mostra claramente uma forte concentração de usuários que jogam por poucas horas, com uma diminuição acentuada na frequência à medida que o número de horas aumenta. <strong>O gráfico apresenta uma distribuição assimétrica, com uma cauda longa à direita, indicando que poucas jogadas acumulam muitas horas enquanto a maioria se concentra em faixas mais baixas</strong>. Esse comportamento reflete o padrão esperado em jogos, onde uma parcela dos jogadores dedica muito tempo, mas a maioria joga por períodos curtos.
+<br />&emsp;&emsp;Com base nos dados estatísticos, inicialmente, com os outliers incluídos, observamos que a média de horas jogadas era de 100,60 horas por jogo, enquanto a mediana era de 27,30 horas. <strong>O desvio padrão de 176,16 horas revela uma grande dispersão nos dados, indicando a presença de valores extremos que elevam a média</strong>. Esses outliers representavam 12,77% do total de dados, evidenciando que uma parcela significativa das jogadas tem tempos de jogo muito superiores ao padrão.
+<br />&emsp;&emsp;O intervalo interquartil (IQR), que vai de 7,80 a 99,20 horas, concentra a maior parte das jogadas. Porém, a presença de outliers faz com que os limites superior e inferior do IQR sejam estendidos. <strong>Isso inflaciona as métricas de tendência central, dificultando a interpretação da média como uma medida representativa do comportamento típico dos usuários</strong>.
+<br />&emsp;&emsp;Ao remover os outliers, os dados passam a refletir melhor o comportamento padrão. A média é reduzida para 42,57 horas, enquanto a mediana, que permanece em 20,10 horas, torna-se mais próxima da média, sugerindo maior homogeneidade. <strong>O desvio padrão também cai significativamente para 52,49 horas, evidenciando uma distribuição mais compacta e representativa</strong>. O intervalo interquartil também é ajustado para 6,30 a 58,00 horas, indicando que a maioria dos usuários realiza jogadas com tempos mais curtos e concentrados em torno da mediana.
+<br />&emsp;&emsp;Um ponto importante a ser destacado é que mesmo sem os outliers, ainda temos cerca de 8,35% dos dados classificados como valores extremos. Esses outliers, embora menos significativos em quantidade, continuam impactando a percepção dos tempos de jogo.
+<br />&emsp;&emsp;Em resumo, <strong>a análise com e sem outliers revela dois comportamentos distintos: um grupo pequeno de jogadas com tempos muito elevados, que eleva as métricas de dispersão, e a grande maioria das jogadas, que reflete tempos de jogo mais curtos e consistentes</strong>. Para análises mais precisas e para ajustar estratégias, como algoritmos de recomendação, é essencial considerar a distribuição geral e o impacto dos outliers, especialmente no caso de jogos que atraem públicos com padrões de jogatina diferentes.
   `,
       },
     },
     {
-      title: 'Top 15 Jogos Mais Jogados',
+      title: 'Histograma de Avaliações',
       path: '/eda/DetailPage',
       params: {
-        title: 'Top 15 Jogos Mais Jogados',
-        image: 'assets/top-15-jogados.webp',
+        title: 'Histograma de Avaliações',
+        image: 'assets/images/histograma-rating.webp',
         description: `
-  Os dados analisados mostram informações detalhadas sobre os jogos mais jogados em um sistema de recomendação, fornecendo insights sobre as preferências dos usuários.
-  O jogo com o menor tempo acumulado no Top 15 alcançou <strong>35.443.052 horas</strong>, enquanto o mais jogado, <strong>Team Fortress 2</strong>, atingiu impressionantes <strong>101.809.976 horas</strong>.
-  A média de horas jogadas entre os jogos analisados é de aproximadamente <strong>60.707.944 horas</strong>, com um desvio padrão de <strong>22.549.342 horas</strong>, indicando uma variabilidade moderada.
-  A mediana, de <strong>46.720.360 horas</strong>, revela que metade dos jogos acumula menos de 47 milhões de horas jogadas.
-  Com um coeficiente de variação de <strong>37,1%</strong>, os dados mostram uma dispersão significativa, mas sem identificar outliers, o que aponta para uma consistência geral entre os jogos analisados.<br />
-  Ao observar o gráfico dos 15 jogos mais jogados, fica evidente a dominância de títulos como <strong>Team Fortress 2</strong>, <strong>Counter-Strike: Global Offensive</strong> e <strong>Dota 2</strong>, que lideram em horas acumuladas e refletem um alto nível de engajamento.
-  Jogos como <strong>Rust</strong> e <strong>Tom Clancy's Rainbow Six Siege</strong> ainda apresentam números expressivos, embora mais distantes do topo.
-  A grande concentração de horas em poucos títulos é um padrão esperado, dado o apelo competitivo, a retenção por meio de atualizações e o suporte a comunidades ativas.
-  Apesar disso, títulos como <strong>Terraria</strong> e <strong>Garry's Mod</strong>, mesmo com menor tempo acumulado, mostram a importância de atender a uma audiência diversificada.<br />
-  Essa análise demonstra que o sistema de recomendação está alinhado às preferências gerais dos jogadores, priorizando com eficácia os títulos mais jogados.
-  Ao mesmo tempo, ela sugere que uma estratégia de diversificação pode atrair usuários para jogos menos explorados, mas ainda relevantes.
-  Essa abordagem equilibra a recomendação de jogos populares com oportunidades de descoberta, maximizando o engajamento dos usuários e otimizando os resultados do sistema.
+  &emsp;&emsp;O gráfico de barras apresenta a Distribuição de Ratings dos Jogos categorizados em diferentes níveis de avaliação. As categorias variam desde Muito Positivo até Muito Negativo, representando o feedback dado pelos usuários em relação aos jogos avaliados. <strong>As categorias mais predominantes são "Muito Positivo", "Positivo" e "Misto", que possuem frequências semelhantes e lideram a distribuição</strong>. Isso indica que a maioria dos jogos avaliados tende a ser bem recebida ou, pelo menos, aceita pela comunidade de jogadores, com avaliações geralmente favoráveis. <strong>Entre as categorias com maior avaliação, "Muito Positivo" e "Positivo" se destacam como as mais frequentes</strong>. A presença significativa dessas categorias sugere que a qualidade dos jogos oferecidos é geralmente alta, o que pode indicar um mercado voltado a entregar boas experiências ao público. A categoria "Misto" aparece como a terceira mais frequente, indicando que há uma quantidade relevante de jogos que dividem opiniões entre os jogadores. Esses jogos podem ser alvos de melhorias para aumentar sua aceitação e eventualmente subir nas avaliações.
+<br />&emsp;&emsp;<strong>Categorias negativas como "Negativo", "Majoritariamente Negativo", "Extremamente Negativo" e "Muito Negativo" possuem frequências significativamente menores em relação às avaliações positivas</strong>. Isso reforça a ideia de que jogos com qualidade inferior ou baixa aceitação são minoria no dataset. No entanto, o pequeno número de avaliações nessas categorias também pode refletir que jogos mal avaliados tendem a receber menos atenção e reviews dos jogadores. Entre as avaliações mais extremas, "Extremamente Positivo" e "Extremamente Negativo" aparecem com as menores frequências, mostrando que jogos que provocam reações intensamente positivas ou negativas são relativamente raros. Esses extremos podem ser explicados por características muito específicas ou nichadas de certos jogos.
+<br />&emsp;&emsp;A predominância de avaliações positivas é um indicativo de que o mercado oferece mais jogos de qualidade ou que a percepção do público é tendenciosa em avaliar positivamente os títulos que jogam. <strong>Jogos avaliados como "Misto" podem ser alvos estratégicos de melhorias, já que estão em uma posição intermediária e têm potencial para melhorar suas avaliações</strong>. <strong>Categorias como "Majoritariamente Negativo" e "Muito Negativo" podem ajudar a identificar características que os usuários consideram problemáticas, servindo como base para aprendizado e desenvolvimento de novos jogos</strong>. Em suma, <strong>o gráfico demonstra uma forte inclinação para avaliações positivas, com poucas categorias refletindo avaliações negativas ou extremas</strong>. Isso sugere um mercado com predominância de qualidade percebida ou um público menos propenso a deixar avaliações extremamente negativas. Estratégias futuras podem considerar esses insights para fortalecer títulos em categorias intermediárias e evitar práticas que possam resultar em avaliações majoritariamente negativas.
   `,
       },
     },
     {
-      title: 'Top 15 Jogos Mais Jogados',
+      title: 'Histograma das Interações',
       path: '/eda/DetailPage',
       params: {
-        title: 'Top 15 Jogos Mais Jogados',
-        image: 'assets/top-15-jogados.webp',
+        title: 'Histograma das Interações',
+        image: 'assets/images/distribuicao-interacoes.webp',
         description: `
-  Os dados analisados mostram informações detalhadas sobre os jogos mais jogados em um sistema de recomendação, fornecendo insights sobre as preferências dos usuários.
-  O jogo com o menor tempo acumulado no Top 15 alcançou <strong>35.443.052 horas</strong>, enquanto o mais jogado, <strong>Team Fortress 2</strong>, atingiu impressionantes <strong>101.809.976 horas</strong>.
-  A média de horas jogadas entre os jogos analisados é de aproximadamente <strong>60.707.944 horas</strong>, com um desvio padrão de <strong>22.549.342 horas</strong>, indicando uma variabilidade moderada.
-  A mediana, de <strong>46.720.360 horas</strong>, revela que metade dos jogos acumula menos de 47 milhões de horas jogadas.
-  Com um coeficiente de variação de <strong>37,1%</strong>, os dados mostram uma dispersão significativa, mas sem identificar outliers, o que aponta para uma consistência geral entre os jogos analisados.<br />
-  Ao observar o gráfico dos 15 jogos mais jogados, fica evidente a dominância de títulos como <strong>Team Fortress 2</strong>, <strong>Counter-Strike: Global Offensive</strong> e <strong>Dota 2</strong>, que lideram em horas acumuladas e refletem um alto nível de engajamento.
-  Jogos como <strong>Rust</strong> e <strong>Tom Clancy's Rainbow Six Siege</strong> ainda apresentam números expressivos, embora mais distantes do topo.
-  A grande concentração de horas em poucos títulos é um padrão esperado, dado o apelo competitivo, a retenção por meio de atualizações e o suporte a comunidades ativas.
-  Apesar disso, títulos como <strong>Terraria</strong> e <strong>Garry's Mod</strong>, mesmo com menor tempo acumulado, mostram a importância de atender a uma audiência diversificada.<br />
-  Essa análise demonstra que o sistema de recomendação está alinhado às preferências gerais dos jogadores, priorizando com eficácia os títulos mais jogados.
-  Ao mesmo tempo, ela sugere que uma estratégia de diversificação pode atrair usuários para jogos menos explorados, mas ainda relevantes.
-  Essa abordagem equilibra a recomendação de jogos populares com oportunidades de descoberta, maximizando o engajamento dos usuários e otimizando os resultados do sistema.
+  &emsp;&emsp;O gráfico de barras apresenta a Distribuição de Interações por Jogo (Escala Log), destacando a frequência de interações realizadas pelos usuários para diferentes jogos. É evidente que a maioria dos jogos possui poucas interações, com a frequência diminuindo progressivamente à medida que o número de interações aumenta. <strong>Essa distribuição assimétrica, com uma cauda longa à direita, reflete um padrão comum em datasets desse tipo, onde poucos jogos acumulam grandes volumes de interações, enquanto a maioria permanece com níveis mais baixos</strong>. O uso da escala logarítmica no eixo Y ajuda a tornar a visualização mais clara, dado o grande intervalo de valores observados.
+<br />&emsp;&emsp;Ao analisarmos os dados estatísticos, inicialmente com os outliers incluídos, observamos que a média de interações por jogo é de 1094,25, enquanto a mediana é de apenas 39 interações. <strong>Essa diferença significativa entre a média e a mediana indica a presença de valores extremos (outliers) que aumentam a média, mas não refletem o comportamento da maioria dos jogos</strong>. O desvio padrão elevado, de 7689,23 interações, reforça essa alta dispersão nos dados. Além disso, 15,73% das interações totais são classificadas como outliers, o que representa uma quantidade significativa e evidencia a presença de jogos altamente populares no dataset.
+<br />&emsp;&emsp;O intervalo interquartil (IQR), que vai de 13 a 179,75 interações, mostra que a maioria dos jogos tem um número de interações concentrado nessa faixa. Contudo, os limites superiores e inferiores do IQR revelam a existência de valores fora desse intervalo, contribuindo para o grande número de outliers. Jogos com mais de 429,87 interações ou menos de -237,12 interações são considerados fora da faixa aceitável.
+<br />&emsp;&emsp;Após a remoção dos outliers, os dados se tornam muito mais homogêneos. A média de interações cai para 65,28, enquanto a mediana é ajustada para 27 interações, valores que estão mais próximos entre si e, portanto, mais representativos da distribuição central. <strong>Essa redução na média e na dispersão (desvio padrão de 87,40) reflete a eliminação dos valores extremos que inflacionavam as métricas iniciais</strong>. O novo IQR, que vai de 11 a 79 interações, concentra ainda mais os valores em torno do comportamento típico dos jogos no dataset.
+<br />&emsp;&emsp;Apesar da remoção dos outliers, ainda temos 10,87% das interações classificadas como valores extremos, o que demonstra que, mesmo com uma abordagem conservadora, alguns jogos continuam se destacando por um número de interações bem acima da média. Esses jogos representam os títulos mais populares ou de maior engajamento.
+<br />&emsp;&emsp;Em suma, <strong>a análise com e sem outliers revela dois padrões distintos: um pequeno grupo de jogos altamente populares com interações excepcionalmente altas e a grande maioria, composta por jogos que recebem poucas interações</strong>. Essa distinção é crucial para entender o comportamento do dataset e para orientar estratégias, como o desenvolvimento de algoritmos de recomendação, que precisam balancear entre destacar jogos populares e promover jogos menos conhecidos. Além disso, o comportamento assimétrico da distribuição deve ser levado em conta ao interpretar as métricas gerais, já que os outliers influenciam fortemente as tendências.
   `,
       },
     },
     {
-      title: 'Top 15 Jogos Mais Jogados',
+      title: 'Correlação entre Rating e Preço',
       path: '/eda/DetailPage',
       params: {
         title: 'Top 15 Jogos Mais Jogados',
