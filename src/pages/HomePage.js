@@ -11,9 +11,9 @@ const HomePage = () => {
       <div className="pt-20 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Block 1: About the Project */}
         <section className="text-center">
-          <h1 className="text-4xl font-extrabold text-gray-800">Game Recommendation Algorithm Analysis</h1>
+          <h1 className="text-4xl font-extrabold text-gray-800">Análise de Algoritmos de Recomendação de Jogos</h1>
           <p className="mt-4 text-gray-600 text-lg">
-            This project analyzes and compares the performance of three different game recommendation algorithms. Learn how each algorithm works and their unique strengths.
+          O projeto consistiu no desenvolvimento de três algoritmos para um sistema de recomendação de jogos, utilizando um dataset baseado nas horas jogadas por usuários como métrica de preferência. Foram implementados os algoritmos KNN, para recomendações baseadas nos vizinhos mais próximos; SVD, para identificar padrões latentes em preferências; e ALS, para otimizar predições em matrizes esparsas. Quanto mais horas um jogo foi jogado, maior era o interesse do usuário nesse título. Também realizamos uma análise exploratória detalhada, investigando as características do dataset e avaliando o desempenho dos algoritmos.
           </p>
         </section>
 
@@ -22,12 +22,12 @@ const HomePage = () => {
           <div className="flex-1 text-left">
             <h2 className="text-3xl font-bold text-gray-800">KNN</h2>
             <p className="mt-4 text-gray-600">
-              KNN uses collaborative filtering techniques to recommend games based on user interactions and preferences. It analyzes patterns in user behavior to provide personalized suggestions.
+            O KNN é um algoritmo baseado em proximidade que classifica ou realiza previsões analisando os k vizinhos mais próximos de um ponto no espaço dos dados. Ele utiliza métricas de distância, como a euclidiana, para identificar similaridades e tomar decisões. Por ser simples, é ideal para problemas de classificação e regressão onde a relação entre os dados é direta.
             </p>
           </div>
           <div className="flex-1">
             <img
-              src="https://via.placeholder.com/400x300"
+              src="/assets/images/KNN.webp"
               alt="KNN"
               className="rounded-lg shadow-md"
             />
@@ -39,12 +39,12 @@ const HomePage = () => {
           <div className="flex-1 text-right">
             <h2 className="text-3xl font-bold text-gray-800">SVD</h2>
             <p className="mt-4 text-gray-600">
-              SVD is based on content-based filtering, recommending games by analyzing features and tags of games that users have liked in the past.
+            O SVD é uma técnica de decomposição de matrizes que transforma uma matriz em três componentes: U, Σ e V^T. Essa separação simplifica os dados em dimensões latentes, permitindo identificar padrões e reduzir a complexidade dos dados. É especialmente útil em problemas de análise de dados e aprendizado de representações.
             </p>
           </div>
           <div className="flex-1">
             <img
-              src="https://via.placeholder.com/400x300"
+              src="/assets/images/SVD.webp"
               alt="SVD"
               className="rounded-lg shadow-md"
             />
@@ -56,12 +56,12 @@ const HomePage = () => {
           <div className="flex-1 text-left">
             <h2 className="text-3xl font-bold text-gray-800">ALS</h2>
             <p className="mt-4 text-gray-600">
-              ALS combines collaborative and content-based filtering in a hybrid model, delivering more accurate and diverse game recommendations.
+            O ALS é um método iterativo para resolver problemas de fatoração de matrizes esparsas. Ele alterna a otimização de parâmetros relacionados a usuários e itens, minimizando o erro entre valores previstos e reais. É eficiente para encontrar padrões em grandes volumes de dados esparsos, como em sistemas de recomendação.
             </p>
           </div>
           <div className="flex-1">
             <img
-              src="https://via.placeholder.com/400x300"
+              src="/assets/images/ALS.webp"
               alt="ALS"
               className="rounded-lg shadow-md"
             />

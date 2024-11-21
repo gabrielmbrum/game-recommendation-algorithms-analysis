@@ -83,21 +83,13 @@ const EDAPage = () => {
       title: 'Correlação entre Rating e Preço',
       path: '/eda/DetailPage',
       params: {
-        title: 'Top 15 Jogos Mais Jogados',
-        image: 'assets/top-15-jogados.webp',
+        title: 'Correlação entre Rating e Preço',
+        image: 'assets/images/rating-vs-preco.webp',
         description: `
-  Os dados analisados mostram informações detalhadas sobre os jogos mais jogados em um sistema de recomendação, fornecendo insights sobre as preferências dos usuários.
-  O jogo com o menor tempo acumulado no Top 15 alcançou <strong>35.443.052 horas</strong>, enquanto o mais jogado, <strong>Team Fortress 2</strong>, atingiu impressionantes <strong>101.809.976 horas</strong>.
-  A média de horas jogadas entre os jogos analisados é de aproximadamente <strong>60.707.944 horas</strong>, com um desvio padrão de <strong>22.549.342 horas</strong>, indicando uma variabilidade moderada.
-  A mediana, de <strong>46.720.360 horas</strong>, revela que metade dos jogos acumula menos de 47 milhões de horas jogadas.
-  Com um coeficiente de variação de <strong>37,1%</strong>, os dados mostram uma dispersão significativa, mas sem identificar outliers, o que aponta para uma consistência geral entre os jogos analisados.<br />
-  Ao observar o gráfico dos 15 jogos mais jogados, fica evidente a dominância de títulos como <strong>Team Fortress 2</strong>, <strong>Counter-Strike: Global Offensive</strong> e <strong>Dota 2</strong>, que lideram em horas acumuladas e refletem um alto nível de engajamento.
-  Jogos como <strong>Rust</strong> e <strong>Tom Clancy's Rainbow Six Siege</strong> ainda apresentam números expressivos, embora mais distantes do topo.
-  A grande concentração de horas em poucos títulos é um padrão esperado, dado o apelo competitivo, a retenção por meio de atualizações e o suporte a comunidades ativas.
-  Apesar disso, títulos como <strong>Terraria</strong> e <strong>Garry's Mod</strong>, mesmo com menor tempo acumulado, mostram a importância de atender a uma audiência diversificada.<br />
-  Essa análise demonstra que o sistema de recomendação está alinhado às preferências gerais dos jogadores, priorizando com eficácia os títulos mais jogados.
-  Ao mesmo tempo, ela sugere que uma estratégia de diversificação pode atrair usuários para jogos menos explorados, mas ainda relevantes.
-  Essa abordagem equilibra a recomendação de jogos populares com oportunidades de descoberta, maximizando o engajamento dos usuários e otimizando os resultados do sistema.
+  &emsp;&emsp;O gráfico apresentado exibe a <strong>distribuição dos preços finais dos jogos em relação às categorias de rating (avaliação)</strong>, sendo essas representadas em português para facilitar a compreensão. <strong>Os outliers foram removidos nesta análise</strong>, visando eliminar valores extremos que poderiam distorcer os resultados. Essa decisão foi justificada pela necessidade de identificar padrões gerais sem a influência de preços atípicos, como jogos premium com valores muito elevados. Assim, o gráfico reflete melhor o comportamento típico dos preços dentro de cada categoria de avaliação.
+<br />&emsp;&emsp;No gráfico, cada categoria de rating é representada por um <strong>boxplot</strong>, que destaca a mediana e a dispersão dos preços em cada grupo. Observa-se que as categorias mais positivas, como <strong>"Muito Positivo"</strong> e <strong>"Extremamente Positivo"</strong>, apresentam medianas e amplitudes de preços ligeiramente superiores às categorias mais negativas, como <strong>"Muito Negativo"</strong>. No entanto, essas diferenças são pequenas, sugerindo que <strong>o rating não é um fator determinante para grandes variações no preço dos jogos</strong>. A concentração dos preços ao redor de valores mais baixos é consistente em todas as categorias, indicando que a maior parte dos jogos é acessível independentemente do rating.
+<br />&emsp;&emsp;Complementando a análise visual, realizamos dois testes estatísticos para avaliar a relação entre rating e preço. O <strong>teste de Spearman</strong> identificou uma correlação de <strong>0.06</strong>, que é <strong>muito fraca</strong>, embora estatisticamente significativa (p-valor: <strong>0.0000</strong>). Isso reforça que, embora existam pequenas variações entre os preços em diferentes categorias, a força da relação entre rating e preço é praticamente insignificante. Por outro lado, o <strong>teste de Kruskal-Wallis</strong> revelou diferenças estatisticamente significativas entre as distribuições de preço das categorias de rating, com uma estatística de <strong>678.68</strong> e p-valor de <strong>0.0000</strong>. Esses resultados indicam que, enquanto há pequenas diferenças entre os grupos, elas são mais detectáveis estatisticamente do que relevantes na prática.
+<br />&emsp;&emsp;Concluímos, portanto, que <strong>o rating não é um forte preditor do preço final dos jogos</strong>. Apesar das diferenças estatisticamente significativas identificadas pelo teste de Kruskal-Wallis, os resultados do gráfico e da correlação de Spearman demonstram que essas diferenças são pequenas e pouco impactantes no contexto geral. Isso sugere que <strong>outros fatores, como popularidade do jogo, número de avaliações ou estratégias comerciais dos desenvolvedores, desempenham papéis mais relevantes na definição do preço</strong>.
   `,
       },
     },
@@ -117,9 +109,7 @@ const EDAPage = () => {
 
         {/* Description */}
         <p className="text-lg text-gray-600 text-center mb-12">
-          A Análise Exploratória de Dados (AED) visa identificar padrões e tendências nos dados.
-          Nesta página, exploramos o dataset de jogos para entender melhor seu comportamento
-          através de gráficos e estatísticas descritivas. Clique em um gráfico para começar!
+        A <strong>Análise Exploratória de Dados (AED)</strong> é fundamental para <strong>compreender padrões e relações nos dados</strong>, sendo crucial no desenvolvimento de sistemas de recomendação. Ela permite identificar tendências, corrigir inconsistências e otimizar algoritmos, garantindo recomendações precisas e personalizadas. Nesse contexto, a AED analisou métricas como <strong>horas jogadas, avaliações, interações e a relação entre preços e ratings</strong>, fornecendo insights valiosos para melhorar a experiência dos usuários e a eficácia das recomendações.
         </p>
 
         {/* Buttons */}
