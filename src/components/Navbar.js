@@ -46,6 +46,12 @@ const Navbar = () => {
             >
               ALS
             </Link>
+            <Link
+              to="/EDAPage"
+              className="text-gray-700 hover:text-blue-500 font-medium transition-colors"
+            >
+              AED
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,6 +109,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)} // Close menu on click
             >
               ALS
+            </Link>
+            <Link
+              to="/EDAPage"
+              className="text-gray-700 hover:text-blue-500 font-medium transition-colors"
+              onClick={() => setIsMenuOpen(false)} // Close menu on click
+            >
+              AED
             </Link>
           </div>
         )}
